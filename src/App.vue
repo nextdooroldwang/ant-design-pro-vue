@@ -8,12 +8,14 @@
 
 <script>
 import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN'
+import enUS from 'ant-design-vue/lib/locale-provider/en_US'
+import jaJP from 'ant-design-vue/lib/locale-provider/ja_JP'
 import { deviceEnquire, DEVICE_TYPE } from '@/utils/device'
 
 export default {
   data () {
     return {
-      locale: zhCN
+      locale: enUS
     }
   },
   mounted () {
@@ -39,7 +41,7 @@ export default {
 }
 </script>
 <style>
-  #app {
-    height: 100%;
-  }
+#app {
+  height: 100%;
+}
 </style>
