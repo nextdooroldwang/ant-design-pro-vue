@@ -10,6 +10,8 @@ import bootstrap from './core/bootstrap'
 import '@/permission' // permission control
 import '@/utils/filter' // global filter
 
+import i18n from '@/lang'
+
 Vue.config.productionTip = false
 
 Vue.use(VueAxios, router)
@@ -17,6 +19,7 @@ Vue.use(VueAxios, router)
 new Vue({
   router,
   store,
+  i18n,
   created () {
     bootstrap()
   },

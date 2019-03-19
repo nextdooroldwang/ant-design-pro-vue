@@ -13,9 +13,18 @@ import jaJP from 'ant-design-vue/lib/locale-provider/ja_JP'
 import { deviceEnquire, DEVICE_TYPE } from '@/utils/device'
 
 export default {
-  data () {
-    return {
-      locale: enUS
+  computed: {
+    locale () {
+      switch (this.$store.getters.lang) {
+        case 'en':
+          return enUS
+        case 'zh':
+          return zhCN
+        case 'ja':
+          return jaJP
+        default:
+          return enUS
+      }
     }
   },
   mounted () {

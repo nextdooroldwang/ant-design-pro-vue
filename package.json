@@ -21,16 +21,17 @@
 		"md5": "^2.2.1",
 		"moment": "^2.24.0",
 		"nprogress": "^0.2.0",
+		"opencollective": "^1.0.3",
 		"opencollective-postinstall": "^2.0.2",
 		"viser-vue": "^2.3.3",
 		"vue": "^2.5.22",
 		"vue-clipboard2": "^0.2.1",
 		"vue-cropper": "0.4.4",
+		"vue-i18n": "^8.9.0",
 		"vue-ls": "^3.2.0",
 		"vue-router": "^3.0.1",
 		"vue-svg-component-runtime": "^1.0.1",
-		"vuex": "^3.1.0",
-		"opencollective": "^1.0.3"
+		"vuex": "^3.1.0"
 	},
 	"devDependencies": {
 		"@babel/polyfill": "^7.2.5",
@@ -57,7 +58,10 @@
 		"env": {
 			"node": true
 		},
-		"extends": [ "plugin:vue/strongly-recommended", "@vue/standard" ],
+		"extends": [
+			"plugin:vue/strongly-recommended",
+			"@vue/standard"
+		],
 		"parserOptions": {
 			"parser": "babel-eslint"
 		},
@@ -115,7 +119,11 @@
 			"autoprefixer": {}
 		}
 	},
-	"browserslist": [ "> 1%", "last 2 versions", "not ie <= 10" ],
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 10"
+	],
 	"collective": {
 		"type": "opencollective",
 		"url": "https://opencollective.com/ant-design-pro-vue"

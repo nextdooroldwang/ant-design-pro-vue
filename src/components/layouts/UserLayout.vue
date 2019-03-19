@@ -1,6 +1,9 @@
 <template>
   <div id="userLayout" :class="['user-layout-wrapper', device]">
     <div class="container">
+      <div class="i18n">
+        <set-i18n/>
+      </div>
       <div class="top">
         <div class="header">
           <a href="/">
@@ -9,7 +12,7 @@
           </a>
         </div>
         <div class="desc">
-          <!-- Mobongi UI 是西湖区最具影响力的 Web 设计规范 -->
+          <!-- Mobongi UI 是东北地区最具影响力的 Web 设计规范 -->
         </div>
       </div>
 
@@ -21,7 +24,7 @@
           <a href="_self">隐私</a>
           <a href="_self">条款</a>
         </div>
-        <div class="copyright">Copyright &copy; 2018 白鹭学园技术组出品</div>
+        <div class="copyright">Copyright &copy; 2019 mobingi开发组出品</div>
       </div>
     </div>
   </div>
@@ -30,10 +33,10 @@
 <script>
 import RouteView from '@/components/layouts/RouteView'
 import { mixinDevice } from '@/utils/mixin.js'
-
+import SetI18n from '@/components/mobingi/i18n'
 export default {
   name: 'UserLayout',
-  components: { RouteView },
+  components: { RouteView, SetI18n },
   mixins: [mixinDevice],
   data () {
     return {}
@@ -65,8 +68,17 @@ export default {
     min-height: 100%;
     background: #f0f2f5 url(~@/assets/background.svg) no-repeat 50%;
     background-size: 100%;
-    padding: 110px 0 144px;
+    padding: 0px 0 144px;
     position: relative;
+
+    .i18n {
+      width: 100%;
+      height: 40px;
+      line-height: 44px;
+      text-align: right;
+      padding-right: 24px;
+      margin-bottom: 80px;
+    }
 
     a {
       text-decoration: none;
@@ -89,14 +101,11 @@ export default {
           opacity: 0.8;
         }
 
-          .title {
-            font-size: 33px;
-            color: rgba(0, 0, 0, .85);
-            font-family: Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            position: relative;
-            top: 2px;
-          }
+        .logo {
+          height: 44px;
+          vertical-align: top;
+          margin-right: 16px;
+          border-style: none;
         }
 
         .title {
@@ -149,4 +158,5 @@ export default {
       }
     }
   }
+}
 </style>

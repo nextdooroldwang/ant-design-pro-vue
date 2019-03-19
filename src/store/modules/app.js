@@ -9,9 +9,10 @@ import {
   DEFAULT_FIXED_SIDEMENU,
   DEFAULT_FIXED_HEADER_HIDDEN,
   DEFAULT_CONTENT_WIDTH_TYPE,
-  DEFAULT_MULTI_TAB
+  DEFAULT_MULTI_TAB,
+  LANG
 } from '@/store/mutation-types'
-
+import { getStore, setStore } from '@/utils/storage'
 const app = {
   state: {
     sidebar: true,
@@ -24,14 +25,19 @@ const app = {
     autoHideHeader: false,
     color: null,
     weak: false,
-    multiTab: true
+    multiTab: true,
+    lang: getStore(LANG) || 'en'
   },
   mutations: {
+    SET_LANG: (state, lang) => {
+      state.lang = lang
+      setStore(LANG, lang)
+    },
     SET_SIDEBAR_TYPE: (state, type) => {
       state.sidebar = type
       Vue.ls.set(SIDEBAR_TYPE, type)
     },
-    CLOSE_SIDEBAR: (state) => {
+    CLOSE_SIDEBAR: state => {
       Vue.ls.set(SIDEBAR_TYPE, true)
       state.sidebar = false
     },
@@ -77,6 +83,9 @@ const app = {
     }
   },
   actions: {
+    setLang ({ commit }, lang) {
+      commit('SET_LANG', lang)
+    },
     setSidebar ({ commit }, type) {
       commit('SET_SIDEBAR_TYPE', type)
     },
