@@ -37,17 +37,22 @@
         </a-menu-item>
       </a-menu>
     </a-dropdown>
+    <span class="action">
+      <set-i18n/>
+    </span>
   </div>
 </template>
 
 <script>
 import HeaderNotice from './HeaderNotice'
+import SetI18n from '@/components/mobingi/i18n'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'UserMenu',
   components: {
-    HeaderNotice
+    HeaderNotice,
+    SetI18n
   },
   methods: {
     ...mapActions(['Logout']),
