@@ -28,7 +28,7 @@ module.exports = {
     ]
   },
 
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     config.resolve.alias
       .set('@$', resolve('src'))
       .set('@api', resolve('src/api'))
@@ -73,7 +73,6 @@ module.exports = {
       less: {
         modifyVars: {
           /* less 变量覆盖，用于自定义 ant design 主题 */
-
           /*
           'primary-color': '#F5222D',
           'link-color': '#F5222D',
@@ -100,6 +99,11 @@ module.exports = {
         pathRewrite: {
           '^/gateway': '/api'
         }
+      },
+      '/mobingi': {
+        target: ' https://www.easy-mock.com/mock/5c90bab5faf3d525b28586f2/mobingi-ui',
+        ws: false,
+        changeOrigin: true
       }
     }
   },

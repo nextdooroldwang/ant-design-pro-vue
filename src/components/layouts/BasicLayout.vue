@@ -1,6 +1,7 @@
 <template>
   <global-layout>
-    <multi-tab v-if="$store.getters.multiTab"></multi-tab>
+    <!-- tab切换组件 -->
+    <!-- <multi-tab v-if="$store.getters.multiTab"></multi-tab> -->
     <transition name="page-transition">
       <route-view/>
     </transition>

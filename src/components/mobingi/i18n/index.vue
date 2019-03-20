@@ -2,9 +2,15 @@
   <a-dropdown>
     <a-icon type="global" class="svg-container" :style="iconStyle"/>
     <a-menu slot="overlay" @click="handleChangeLang">
-      <a-menu-item key="en">English</a-menu-item>
-      <a-menu-item key="ja">日本語</a-menu-item>
-      <a-menu-item key="zh">中文</a-menu-item>
+      <a-menu-item key="en">
+        <span role="img" aria-label="英文">🇺🇸</span> English
+      </a-menu-item>
+      <a-menu-item key="ja">
+        <span role="img" aria-label="日文">🇯🇵</span> 日本語
+      </a-menu-item>
+      <a-menu-item key="zh">
+        <span role="img" aria-label="简体中文">🇨🇳</span> 简体中文
+      </a-menu-item>
     </a-menu>
   </a-dropdown>
 </template>

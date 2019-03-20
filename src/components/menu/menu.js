@@ -134,10 +134,8 @@ export default {
         return null
       }
       const props = {}
-      typeof (icon) === 'object' ? props.component = icon : props.type = icon
-      return (
-        <Icon {... { props } }/>
-      )
+      typeof icon === 'object' ? (props.component = icon) : (props.type = icon)
+      return <Icon {...{ props }} />
     }
   },
   render () {
@@ -163,9 +161,11 @@ export default {
     })
     // {...{ props, on: on }}
     return (
-      <Menu vModel={this.selectedKeys} {...{ props, on: on }}>
-        {menuTree}
-      </Menu>
+      <div style="max-width:715px">
+        <Menu vModel={this.selectedKeys} {...{ props, on: on }}>
+          {menuTree}
+        </Menu>
+      </div>
     )
   }
 }
