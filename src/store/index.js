@@ -4,21 +4,21 @@ import createPersistedState from 'vuex-persistedstate'
 
 import app from './modules/app'
 import user from './modules/user'
-import permission from './modules/permission'
+// import permission from './modules/permission'
 import getters from './getters'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  plugins: [
-    createPersistedState({
-      storage: window.sessionStorage
-    })
-  ],
+  // plugins: [
+  //   createPersistedState({
+  //     storage: window.sessionStorage
+  //   })
+  // ],
   modules: {
     app,
-    user,
-    permission
+    user
+    // permission
   },
   state: {},
   mutations: {},
