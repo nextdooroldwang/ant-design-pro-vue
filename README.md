@@ -19,6 +19,13 @@ An out-of-box UI solution for enterprise applications as a Vue boilerplate. base
 - Documentation: https://pro.loacg.com/docs/getting-started
 - ChangeLog: https://pro.loacg.com/docs/changelog
 - FAQ: https://pro.loacg.com/docs/faq
+- Branches: 
+  - demo/router-view-table: CRUD view in router
+  - feature/demand_load: loaded on demand
+  - feature/lang: i18n support
+  - feature/dynamic-menu: dynamic menu demo
+  - lite: lite template (legacy)
+
 
 Overview
 ----
@@ -78,12 +85,10 @@ yarn run lint
 
 ### Other
 
-- **IMPORTANT : About Issue feedback !! Please describe your environment, the Pro version or branch used, what happened, etc. when opening Issue**
+- **IMPORTANT : About Issue feedback !! when opening Issue read [Issue / PR Contributing](https://github.com/sendya/ant-design-pro-vue/issues/90)**
 
 - [Vue-cli3](https://cli.vuejs.org/guide/) used by the project.
-- Disable Eslint (not recommended): remove `eslintConfig`  field in `package.json` 
-
-- Easy-Mock used by project，[easy-mock](https://www.easy-mock.com/)  Project API Data [DO NOT CHANGE THE INTERFACE](https://www.easy-mock.com/project/5b7bce071f130e5b7fe8cd7d)，If you want to modify, please fork [ANTD-PRO-Easy-Mock-API.zip](https://github.com/sendya/ant-design-pro-vue/files/2682711/ANTD-PRO-Easy-Mock-API.zip) and running to your server.
+- Disable Eslint (not recommended): remove `eslintConfig`  field in `package.json`  and `vue.config.js` field `lintOnSave: false`
 
 - Load on Demand: modify `/src/main.js` L7,  append `import './core/lazy_use'` code.
 
@@ -120,30 +125,6 @@ eg:
       }
     ]
     ```
-
-
-Docs
-----
-
-- [Router and Menu](https://github.com/sendya/ant-design-pro-vue/blob/master/src/router/README.md)
-- [Table](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/table/README.md) [@Saraka](https://github.com/saraka-tsukai)
-- [ANTD DefaultConfig](https://github.com/sendya/ant-design-pro-vue/blob/master/src/defaultSettings.js)
-- [Frist page loading animate](https://github.com/sendya/ant-design-pro-vue/blob/master/docs/add-page-loading-animate.md)
-- [Multi-Tabs feature/multi-tabs](https://github.com/sendya/ant-design-pro-vue/tree/feature/multi-tabs) [How to remove](https://github.com/sendya/ant-design-pro-vue/blob/master/docs/multi-tabs.md)
-- [LoadOnDemand Demo feature/demand_load](https://github.com/sendya/ant-design-pro-vue/tree/feature/demand_load)
-- [LoadOnDemand Docs](https://github.com/sendya/ant-design-pro-vue/blob/master/docs/load-on-demand.md)  
-- [i18n feature/lang](https://github.com/sendya/ant-design-pro-vue/tree/feature/lang)  Creator [@musnow](https://github.com/musnow)
-- [Dependency analysis tool: analyzer](https://github.com/sendya/ant-design-pro-vue/blob/master/docs/webpack-bundle-analyzer.md)  
-- ANTD PRO Components:
-  - Trend [Trend.md](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/Trend/index.md)
-  - AvatarList [AvatarList.md](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/AvatarList/index.md)
-  - CountDown [CountDown.md](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/CountDown/index.md)
-  - Ellipsis [Ellipsis.md](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/Ellipsis/index.md)
-  - NumberInfo [NumberInfo.md](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/NumberInfo/index.md)
-  - FooterToolbar [FooterToolbar.md](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/FooterToolbar/index.md)
-  - IconSelector [IconSelector.md](https://github.com/sendya/ant-design-pro-vue/blob/master/src/components/IconSelector/README.md) Creator: [@Saraka](https://github.com/saraka-tsukai)
-- doing...
-
 
 ## Contributors
 
